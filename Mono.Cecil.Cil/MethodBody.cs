@@ -38,6 +38,11 @@ namespace Mono.Cecil.Cil {
 			set { max_stack_size = value; }
 		}
 
+		/// <summary>
+		/// 为快速获取及修改IL而设置
+		/// </summary>
+		public int CodeOffset { get; internal set; }
+
 		public int CodeSize {
 			get { return code_size; }
 		}

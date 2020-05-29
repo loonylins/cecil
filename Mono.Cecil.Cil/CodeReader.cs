@@ -141,6 +141,7 @@ namespace Mono.Cecil.Cil {
 		void ReadCode ()
 		{
 			start = Position;
+			body.CodeOffset = start;
 			var code_size = body.code_size;
 
 			if (code_size < 0 || Length <= (uint) (code_size + Position))
